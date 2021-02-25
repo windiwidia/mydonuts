@@ -1,0 +1,99 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+// Variables
+$primaryColor: #f45c77;
+$secondaryColor: #f45c77;
+$thirdColor: #fbc4ce;
+$tersierColor: #ffff;
+
+// Mixin
+@mixin button {
+  display: inline-block;
+  color: white;
+  background-color: $primaryColor;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+}
+
+// Styles
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+// navbar
+.custom-nav {
+  .navbar-brand {
+    img {
+      width: 50px;
+    }
+  }
+  #navbarNav {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $primaryColor;
+          font-size: 14px;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin-left: 2.4em;
+
+          &:hover {
+            color: darken($primaryColor, 20%);
+            font-weight: 700;
+            transition: 0.3s color ease;
+          }
+        }
+      }
+    }
+  }
+  //   @media screen and(max-width: 992px) {
+  //   }
+}
+
+.home-bg {
+  img {
+    margin-top: 50px;
+    max-width: 550px;
+  }
+  //   background-image: url(../img/bg-donut.png);
+  //   // background-position: ;
+  //   background-repeat: no-repeat;
+  //   background-size: 45vmax;
+
+  @media screen and(max-width: 576px) {
+    max-width: 100px;
+  }
+}
+// custom section
+.custom-section {
+  margin-top: 8em;
+  margin-bottom: 8em;
+
+  h1,
+  h1 .donut {
+    font-weight: 700;
+    font-size: 2.7rem;
+    color: $primaryColor;
+    line-height: 1;
+  }
+  p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: $secondaryColor;
+    // line-height: 1;
+  }
+  a {
+    @include button;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+      background-color: transparent;
+      font-weight: 700;
+    }
+  }
+}
